@@ -64,7 +64,11 @@
   },
   "browserslist": [],
   "prettier": {
+    "semi": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
     "singleQuote": true,
+    "jsxSingleQuote": true,
     "overrides": [
       {
         "files": [
