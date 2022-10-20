@@ -142,3 +142,5 @@ app
     });
   })
   .catch(console.log);
+
+ipcMain.on('controls-close', () => mainWindow?.close());

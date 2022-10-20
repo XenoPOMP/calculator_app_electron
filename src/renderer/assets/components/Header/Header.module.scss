@@ -1,0 +1,30 @@
+header.appHeader {
+  width: 100%;
+  height: var(--headerHeight);
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  -webkit-app-region: drag;
+
+  .placeholder {
+    height: var(--headerHeight);
+    aspect-ratio: 2 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+
+    &:hover {
+      background: var(--hIconCloseBackground);
+
+      svg {
+        color: var(--hIconCloseFontColor);
+      }
+    }
+
+    svg {
+      color: var(--hIconsColor);
+    }
+  }
+}

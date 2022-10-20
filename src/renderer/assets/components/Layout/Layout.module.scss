@@ -1,0 +1,39 @@
+* {
+  $themeTransitionTiming: .1s ease;
+  transition: color $themeTransitionTiming,
+  background-color $themeTransitionTiming;
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.layout {
+  --headerHeight: 25px;
+  --footerHeight: 20px;
+
+  --numberOutputHeight: 0px;
+  --numberOutputWidth: 0px;
+
+  background: var(--appBackground);
+  width: 100vw;
+  height: 100vh;
+
+  main {
+    width: 100%;
+    height: calc(100vh - var(--footerHeight) - var(--headerHeight) - var(--numberOutputHeight));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
