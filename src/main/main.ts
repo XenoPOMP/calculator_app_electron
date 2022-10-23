@@ -75,7 +75,7 @@ const createWindow = async () => {
     minWidth: 427,
     height: 556,
     minHeight: 556,
-    resizable: false,
+    resizable: true,
     maximizable: false,
     fullscreen: false,
     frame: false,

@@ -121,7 +121,8 @@
     "react-dom": "^18.2.0",
     "react-ionicons": "^4.2.0",
     "react-router-dom": "^6.3.0",
-    "string-math": "^1.2.2"
+    "string-math": "^1.2.2",
+    "string-occurrence": "^1.2.0"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
@@ -193,9 +194,9 @@
   },
   "build": {
     "productName": "Calculator Electron",
-    "buildVersion" : "0.1.0",
+    "buildVersion": "0.1.0",
     "appId": "ru.xeno.electron.calculator",
-    "artifactName" : "${productName} v${version} installer.${ext}",
+    "artifactName": "${productName} v${version} installer.${ext}",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
     "files": [

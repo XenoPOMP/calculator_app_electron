@@ -12,8 +12,25 @@ const MainPage = () => {
     setPreviousInput('');
   };
 
-  const addChar = (char: string | number) =>
+  const addChar = (char: string | number) => {
+    const stringOccurrence = require('string-occurrence');
+
+    if (char == '(') {
+      const leftBrackets = stringOccurrence(currentInput, '(');
+      const rightBrackets = stringOccurrence(currentInput, ')');
+
+      const putChar = leftBrackets === rightBrackets ? '(' : ')';
+      setCurrentInput((e) => `${e}${putChar}`);
+      return;
+    }
+
     setCurrentInput((e) => `${e}${char}`);
+  };
+  const removeChar = () => {
+    const str = currentInput.slice(0, currentInput.length - 1);
+    setPreviousInput('');
+    setCurrentInput(str);
+  };
 
   const addZero = () =>
     currentInput[currentInput.length - 1] !== '0'
@@ -68,6 +85,18 @@ const MainPage = () => {
                 onClick={() => clearInput()}
               >
                 AC
+              </div>
+              <div
+                className={`${styles.btn} ${styles.del}`}
+                onClick={() => removeChar()}
+              >
+                DEL
+              </div>
+              <div
+                className={`${styles.btn} ${styles.bracket}`}
+                onClick={() => addChar('(')}
+              >
+                (
               </div>
               <div
                 className={`${styles.btn} ${styles.operator}`}

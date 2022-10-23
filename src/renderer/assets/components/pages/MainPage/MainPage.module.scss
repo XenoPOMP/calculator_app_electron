@@ -49,7 +49,6 @@
 
       .btn {
         border-radius: 7px;
-        background: red;
         width: 100%;
         height: 100%;
         display: flex;
@@ -63,12 +62,13 @@
         cursor: pointer;
         user-select: none;
 
-        &.ac, &.zero {
+        &.zero {
           grid-column-start: 1;
           grid-column-end: 4;
         }
 
-        &.ac, &.percent {
+        &.ac, &.percent,
+        &.bracket, &.del {
           background: var(--mAcAndPercentColor);
           color: var(--mAcAndPercentFontColor);
         }
