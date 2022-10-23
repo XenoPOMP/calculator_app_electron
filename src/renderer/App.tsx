@@ -4,9 +4,7 @@ import MainPage from './assets/components/pages/MainPage/MainPage';
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path='/' element={<MainPage />} />
-      </Routes>
+      <MainPage />
     </Router>
   );
 }

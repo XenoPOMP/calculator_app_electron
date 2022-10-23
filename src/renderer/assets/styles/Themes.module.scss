@@ -29,5 +29,10 @@
 
   // Footer --------------------------------------
   --fBackground: #0F0E0E;
+  --fFontColor: #898989;
+  // Footer > Icons
+  --fIconColor: var(--fFontColor);
+  --fIconHoverBackground: #282727;
+  --fIconHoverColor: --fIconColor;
   // ---------------------------------------------
 }

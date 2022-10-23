@@ -1,5 +1,55 @@
 footer.appFooter {
   width: 100%;
-  height: var(--footerHeight);
+  height: calc(100vh - var(--headerHeight));
+  position: absolute;
+  bottom: calc(0 - var(--footerHeight));
   background: var(--fBackground);
+
+  .controls {
+    width: 100%;
+    height: var(--footerHeight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      cursor: pointer;
+
+      rect, path {
+        fill: var(--fIconColor);
+        stroke: var(--fIconColor);
+      }
+    }
+
+    .iconContainer {
+      cursor: pointer;
+      height: 100%;
+      aspect-ratio: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        height: 14px;
+      }
+
+      &:hover {
+        background: var(--fIconHoverBackground);
+
+        svg {
+          path, rect {
+            fill: var(--fIconHoverColor);
+          }
+        }
+      }
+    }
+  }
+
+  &.expanded {
+    bottom: 0;
+
+    svg.expander {
+      transform: rotate(.5turn);
+    }
+  }
 }
