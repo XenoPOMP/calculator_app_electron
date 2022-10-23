@@ -192,8 +192,10 @@
     "webpack-merge": "^5.8.0"
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.erb.ElectronReact",
+    "productName": "Calculator Electron",
+    "buildVersion" : "0.1.0",
+    "appId": "ru.xeno.electron.calculator",
+    "artifactName" : "${productName} v${version} installer.${ext}",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
     "files": [
