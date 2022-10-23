@@ -6,12 +6,13 @@ import Footer from '../Footer/Footer';
 
 interface props {
   children?: React.ReactNode;
+  title?: string;
 }
 
-const Layout: FC<props> = ({ children }) => {
+const Layout: FC<props> = ({ children, title }) => {
   return (
     <div className={`${styles.layout} ${themes.dark}`}>
-      <Header />
+      <Header title={title} />
 
       <main>{children}</main>
 

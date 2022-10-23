@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './Header.module.scss';
 
-const Header = () => {
+interface props {
+  title?: string;
+}
+
+const Header: FC<props> = ({ title }) => {
   const ipc = window.electron.ipcRenderer;
 
   return (
     <header className={styles.appHeader}>
+      <div className={styles.title}>{title}</div>
+
       <div className={styles.buttonGrid}>
         <svg
           width='14'

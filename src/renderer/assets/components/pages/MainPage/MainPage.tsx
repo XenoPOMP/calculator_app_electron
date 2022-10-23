@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../../Layout/Layout';
 import styles from './MainPage.module.scss';
+const math = require('mathjs');
 
 const MainPage = () => {
   const [previousInput, setPreviousInput] = useState('');
@@ -46,16 +47,13 @@ const MainPage = () => {
   };
 
   const proceedAction = () => {
-    const stringMath = require('string-math');
-    const result = stringMath(formatInput());
-
+    const result = `${math.evaluate(formatInput())}`;
     setPreviousInput(`${formatInput()} =`);
-
     setCurrentInput(`${result}`);
   };
 
   return (
-    <Layout>
+    <Layout title={'Calculator'}>
       <div className={styles.page}>
         <div className={styles.numberOutput}>
           <div className={styles.previous}>{previousInput}</div>
@@ -71,7 +69,6 @@ const MainPage = () => {
               >
                 AC
               </div>
-              <div className={`${styles.btn} ${styles.percent}`}>%</div>
               <div
                 className={`${styles.btn} ${styles.operator}`}
                 onClick={() => addChar('/')}
@@ -160,7 +157,6 @@ const MainPage = () => {
               >
                 0
               </div>
-              <div className={`${styles.btn} ${styles.number}`}>,</div>
               <div
                 className={`${styles.btn} ${styles.operator}`}
                 onClick={() => proceedAction()}
