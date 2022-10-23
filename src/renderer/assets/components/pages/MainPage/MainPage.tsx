@@ -6,7 +6,10 @@ const MainPage = () => {
   return (
     <Layout>
       <div className={styles.page}>
-        <div className={styles.numberOutput}></div>
+        <div className={styles.numberOutput}>
+          <div className={styles.previous}>12 x 6 =</div>
+          <div className={styles.current}>72</div>
+        </div>
 
         <div className={styles.buttons}>
           <div className={styles.buttons}>

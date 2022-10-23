@@ -7,15 +7,20 @@
 
   // Main ----------------------------------------
   --mFontColor: white;
-  // Main > AC and percent -----------------------
+
+  // Main > Output
+  --mOutPreviousFontColor: var(--hIconsColor);
+  --mOutCurrentFontColor: var(--mFontColor);
+
+  // Main > Grid > AC and percent -----------------------
   --mAcAndPercentColor: #847A7A;
   --mAcAndPercentFontColor: var(--mFontColor);
   // ---------------------------------------------
-  // Main > Operators ----------------------------
+  // Main > Grid > Operators ----------------------------
   --mOperatorColor: #DA9105;
   --mOperatorFontColor: var(--mFontColor);
   // ---------------------------------------------
-  // Main > Numbers ------------------------------
+  // Main > Grid > Numbers ------------------------------
   --mNumberColor: #4F4949;
   --mNumberFontColor: var(--mFontColor);
   // ---------------------------------------------

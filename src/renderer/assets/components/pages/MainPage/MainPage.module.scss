@@ -5,8 +5,31 @@
   .numberOutput {
     height: var(--numberOutputWidth);
     width: calc(100% - 40px);
-    border: 2px solid green;
     margin: 10px 20px 0;
+    font-family: 'Raleway', serif;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    .previous, .current {
+      width: 100%;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      user-select: none;
+    }
+
+    .previous {
+      font-weight: normal;
+      font-size: 15px;
+      height: 24px;
+      color: var(--mOutPreviousFontColor);
+    }
+
+    .current {
+      font-weight: bold;
+      font-size: 23px;
+      height: 44px;
+      color: var(--mOutCurrentFontColor);
+    }
   }
 
   .buttons {
@@ -34,7 +57,7 @@
         color: var(--mFontColor);
         font-size: 23px;
         font-family: 'Raleway', serif;
-        font-weight: 400;
+        font-weight: 600;
         font-feature-settings: 'pnum' on, 'lnum' on;
         cursor: pointer;
         user-select: none;
