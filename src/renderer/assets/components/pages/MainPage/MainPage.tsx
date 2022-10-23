@@ -15,6 +15,7 @@ const MainPage = () => {
   const addChar = (char: string | number) => {
     const stringOccurrence = require('string-occurrence');
 
+    // Logic of bracket insert
     if (char == '(') {
       const leftBrackets = stringOccurrence(currentInput, '(');
       const rightBrackets = stringOccurrence(currentInput, ')');
@@ -23,6 +24,18 @@ const MainPage = () => {
       setCurrentInput((e) => `${e}${putChar}`);
       return;
     }
+
+    // Logic of preventing inserting operator sign to first place
+    if (
+      currentInput == '' &&
+      (char == '=' || char == '+' || char == '-' || char == '*' || char == '/')
+    ) {
+      console.warn('Wrong operator sign input');
+      return;
+    }
+
+    // Clear input if previous input exists
+    if (previousInput != '') clearInput();
 
     setCurrentInput((e) => `${e}${char}`);
   };
@@ -64,6 +77,8 @@ const MainPage = () => {
   };
 
   const proceedAction = () => {
+    if (currentInput == '') return;
+
     const result = `${math.evaluate(formatInput())}`;
     setPreviousInput(`${formatInput()} =`);
     setCurrentInput(`${parseFloat(result)}`);
@@ -185,6 +200,12 @@ const MainPage = () => {
                 onClick={() => addChar(0)}
               >
                 0
+              </div>
+              <div
+                className={`${styles.btn} ${styles.operator}`}
+                onClick={() => addChar('^2')}
+              >
+                x^2
               </div>
               <div
                 className={`${styles.btn} ${styles.operator}`}
