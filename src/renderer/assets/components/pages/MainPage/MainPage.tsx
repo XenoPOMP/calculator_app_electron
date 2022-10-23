@@ -49,7 +49,7 @@ const MainPage = () => {
   const proceedAction = () => {
     const result = `${math.evaluate(formatInput())}`;
     setPreviousInput(`${formatInput()} =`);
-    setCurrentInput(`${result}`);
+    setCurrentInput(`${parseFloat(result)}`);
   };
 
   return (
