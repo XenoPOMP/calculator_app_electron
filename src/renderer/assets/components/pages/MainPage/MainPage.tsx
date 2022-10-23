@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../../Layout/Layout';
 import styles from './MainPage.module.scss';
 const math = require('mathjs');
+const stringOccurrence = require('string-occurrence');
 
 const MainPage = () => {
   const [previousInput, setPreviousInput] = useState('');
@@ -13,7 +14,9 @@ const MainPage = () => {
   };
 
   const addChar = (char: string | number) => {
-    const stringOccurrence = require('string-occurrence');
+    // Set limits to input length
+    if (currentInput.length == 27) return;
+    setPreviousInput('');
 
     // Logic of bracket insert
     if (char == '(') {
@@ -33,9 +36,6 @@ const MainPage = () => {
       console.warn('Wrong operator sign input');
       return;
     }
-
-    // Clear input if previous input exists
-    if (previousInput != '') clearInput();
 
     setCurrentInput((e) => `${e}${char}`);
   };
