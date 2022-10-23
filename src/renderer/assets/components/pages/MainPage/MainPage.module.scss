@@ -57,6 +57,7 @@
 
         &.number {
           background: var(--mNumberColor);
+          color: var(--mNumberFontColor);
         }
 
         &:active {

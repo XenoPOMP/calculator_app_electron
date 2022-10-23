@@ -1,20 +1,26 @@
 .dark {
   --appBackground: #232121;
 
-  // Header
+  // Header --------------------------------------
   --hIconsColor: #898989;
+  // ---------------------------------------------
 
-  // Main
+  // Main ----------------------------------------
   --mFontColor: white;
-  // Main > AC and percent
+  // Main > AC and percent -----------------------
   --mAcAndPercentColor: #847A7A;
   --mAcAndPercentFontColor: var(--mFontColor);
-  // Main > Operators
+  // ---------------------------------------------
+  // Main > Operators ----------------------------
   --mOperatorColor: #DA9105;
   --mOperatorFontColor: var(--mFontColor);
-  // Main > Numbers
+  // ---------------------------------------------
+  // Main > Numbers ------------------------------
   --mNumberColor: #4F4949;
+  --mNumberFontColor: var(--mFontColor);
+  // ---------------------------------------------
 
-  // Footer
+  // Footer --------------------------------------
   --fBackground: #0F0E0E;
+  // ---------------------------------------------
 }
