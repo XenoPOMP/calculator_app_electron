@@ -87,144 +87,137 @@ const MainPage = () => {
 
   return (
     <Layout title={'Calculator'}>
-      <Routes>
-        <Route
-          path={'/'}
-          element={
-            <div className={styles.mainPage}>
-              <div className={styles.numberOutput}>
-                <div className={styles.previous}>{previousInput}</div>
-                <div className={styles.current}>{formatInput()}</div>
+      <div className={styles.mainPage}>
+        <div className={styles.numberOutput}>
+          <div className={styles.previous}>{previousInput}</div>
+          <div className={styles.current}>{formatInput()}</div>
+        </div>
+
+        <div className={styles.buttons}>
+          <div className={styles.buttons}>
+            <div className={styles.grid}>
+              <div
+                className={`${styles.btn} ${styles.ac}`}
+                onClick={() => clearInput()}
+              >
+                AC
+              </div>
+              <div
+                className={`${styles.btn} ${styles.del}`}
+                onClick={() => removeChar()}
+              >
+                DEL
+              </div>
+              <div
+                className={`${styles.btn} ${styles.bracket}`}
+                onClick={() => addChar('(')}
+              >
+                (
+              </div>
+              <div
+                className={`${styles.btn} ${styles.operator}`}
+                onClick={() => addChar('/')}
+              >
+                ÷
               </div>
 
-              <div className={styles.buttons}>
-                <div className={styles.buttons}>
-                  <div className={styles.grid}>
-                    <div
-                      className={`${styles.btn} ${styles.ac}`}
-                      onClick={() => clearInput()}
-                    >
-                      AC
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.del}`}
-                      onClick={() => removeChar()}
-                    >
-                      DEL
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.bracket}`}
-                      onClick={() => addChar('(')}
-                    >
-                      (
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.operator}`}
-                      onClick={() => addChar('/')}
-                    >
-                      ÷
-                    </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(7)}
+              >
+                7
+              </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(8)}
+              >
+                8
+              </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(9)}
+              >
+                9
+              </div>
+              <div
+                className={`${styles.btn} ${styles.operator}`}
+                onClick={() => addChar('*')}
+              >
+                x
+              </div>
 
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(7)}
-                    >
-                      7
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(8)}
-                    >
-                      8
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(9)}
-                    >
-                      9
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.operator}`}
-                      onClick={() => addChar('*')}
-                    >
-                      x
-                    </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(4)}
+              >
+                4
+              </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(5)}
+              >
+                5
+              </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(6)}
+              >
+                6
+              </div>
+              <div
+                className={`${styles.btn} ${styles.operator}`}
+                onClick={() => addChar('-')}
+              >
+                -
+              </div>
 
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(4)}
-                    >
-                      4
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(5)}
-                    >
-                      5
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(6)}
-                    >
-                      6
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.operator}`}
-                      onClick={() => addChar('-')}
-                    >
-                      -
-                    </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(1)}
+              >
+                1
+              </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(2)}
+              >
+                2
+              </div>
+              <div
+                className={`${styles.btn} ${styles.number}`}
+                onClick={() => addChar(3)}
+              >
+                3
+              </div>
+              <div
+                className={`${styles.btn} ${styles.operator}`}
+                onClick={() => addChar('+')}
+              >
+                +
+              </div>
 
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(1)}
-                    >
-                      1
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(2)}
-                    >
-                      2
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.number}`}
-                      onClick={() => addChar(3)}
-                    >
-                      3
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.operator}`}
-                      onClick={() => addChar('+')}
-                    >
-                      +
-                    </div>
-
-                    <div
-                      className={`${styles.btn} ${styles.number} ${styles.zero}`}
-                      onClick={() => addChar(0)}
-                    >
-                      0
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.operator}`}
-                      onClick={() => addChar('^2')}
-                    >
-                      x^2
-                    </div>
-                    <div
-                      className={`${styles.btn} ${styles.operator}`}
-                      onClick={() => proceedAction()}
-                    >
-                      =
-                    </div>
-                  </div>
-                </div>
+              <div
+                className={`${styles.btn} ${styles.number} ${styles.zero}`}
+                onClick={() => addChar(0)}
+              >
+                0
+              </div>
+              <div
+                className={`${styles.btn} ${styles.operator}`}
+                onClick={() => addChar('^2')}
+              >
+                x^2
+              </div>
+              <div
+                className={`${styles.btn} ${styles.operator}`}
+                onClick={() => proceedAction()}
+              >
+                =
               </div>
             </div>
-          }
-        />
-      </Routes>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };

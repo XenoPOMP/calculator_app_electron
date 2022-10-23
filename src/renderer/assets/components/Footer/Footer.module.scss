@@ -29,6 +29,12 @@ footer.appFooter {
       justify-content: center;
       align-items: center;
 
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       svg {
         height: 14px;
       }
