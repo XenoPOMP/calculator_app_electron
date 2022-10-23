@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import { CloseOutline } from 'react-ionicons';
 
 const Header = () => {
   const ipc = window.electron.ipcRenderer;
@@ -14,7 +13,10 @@ const Header = () => {
           viewBox='0 0 14 3'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-          onClick={() => ipc.sendMessage('controls-minimize', [])}
+          onClick={() => {
+            // @ts-ignore
+            ipc.sendMessage('controls-minimize', []);
+          }}
         >
           <rect width='13.9096' height='2.31827' rx='1.15913' fill='#898989' />
         </svg>
@@ -25,7 +27,10 @@ const Header = () => {
           viewBox='0 0 12 12'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-          onClick={() => ipc.sendMessage('controls-close', [])}
+          onClick={() => {
+            // @ts-ignore
+            ipc.sendMessage('controls-close', []);
+          }}
         >
           <rect
             x='3.05176e-05'

@@ -16,6 +16,10 @@ header.appHeader {
 
     svg {
       cursor: pointer;
+
+      path, rect {
+        fill: var(--hIconsColor);
+      }
     }
   }
 }
