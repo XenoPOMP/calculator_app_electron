@@ -4,6 +4,17 @@
   // Header
   --hIconsColor: #898989;
 
+  // Main
+  --mFontColor: white;
+  // Main > AC and percent
+  --mAcAndPercentColor: #847A7A;
+  --mAcAndPercentFontColor: var(--mFontColor);
+  // Main > Operators
+  --mOperatorColor: #DA9105;
+  --mOperatorFontColor: var(--mFontColor);
+  // Main > Numbers
+  --mNumberColor: #4F4949;
+
   // Footer
   --fBackground: #0F0E0E;
 }

@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './Layout.module.scss';
 import themes from '../../styles/Themes.module.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
-const Layout = () => {
+interface props {
+  children?: React.ReactNode;
+}
+
+const Layout: FC<props> = ({ children }) => {
   return (
     <div className={`${styles.layout} ${themes.dark}`}>
       <Header />
 
-      <main></main>
+      <main>{children}</main>
 
       <Footer />
     </div>
