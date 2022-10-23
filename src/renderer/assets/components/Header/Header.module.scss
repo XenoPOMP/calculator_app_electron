@@ -6,25 +6,16 @@ header.appHeader {
   justify-content: right;
   -webkit-app-region: drag;
 
-  .placeholder {
-    height: var(--headerHeight);
-    aspect-ratio: 2 / 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  .buttonGrid {
+    padding: 10px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 12px 12px;
     -webkit-app-region: no-drag;
-
-    &:hover {
-      background: var(--hIconCloseBackground);
-
-      svg {
-        color: var(--hIconCloseFontColor);
-      }
-    }
+    align-items: center;
 
     svg {
-      color: var(--hIconsColor);
+      cursor: pointer;
     }
   }
 }

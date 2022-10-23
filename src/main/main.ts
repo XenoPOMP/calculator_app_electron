@@ -144,3 +144,4 @@ app
   .catch(console.log);
 
 ipcMain.on('controls-close', () => mainWindow?.close());
+ipcMain.on('controls-minimize', () => mainWindow?.minimize());
