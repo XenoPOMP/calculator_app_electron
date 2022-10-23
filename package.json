@@ -119,7 +119,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ionicons": "^4.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "string-math": "^1.2.2"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
